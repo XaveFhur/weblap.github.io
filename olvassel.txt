@@ -1,3 +1,27 @@
 Készítette: Soós Marcell HGW16P
-URL cím: weblap.github.io
+URL cím: https://xavefhur.github.io/weblap.github.io/
 Témája: Egy kávézó, ahol ihatsz egy nagyon finom kávét, vagy akár házhoz is rendelhetsz! Külön kalória kalkulátorunk segít abban, hogy betartsd a diétádat!
+
+Mindegyik weblap megkapta a "scriptStilo" JavaScript fájl linkjét a lap tetején, ami a navbar reszponzivitásra és a főoldal kártya animációkra kell.
+
+A calorieCalculator JavaScript fájl azért felelős, hogy a kalkulator oldalon kiszámolja a megadott paraméterek mentén, hogy hány kalóriát tartalmaz az adott kávé.
+Van egy alap adatbázisa az értékekről, majd ezután a kalkulálás gomb megnyomásával előszőr ellenőrzi, hogy mindegyik szám formátum, majd összead a megadott értékek alapján.
+Miután megvan, létrehoz egy h2, h3 és p taget, majd beleírja a megadott értékeket. A kód elhelyezése a weblap alján van.
+
+A formValidation JavaScript fájl, a rendelés oldal formját hivatott ellenőrizni. Először megkeressük a validálandó mezőket, majd egy 2 segédfüggvényt használunk, hogy 
+megbizonyosodjunk a hibáról. Ha van hiba, akkor egy piros szövegben jelenik meg a hiba oka, ha nincs, (vagy elhárítottuk a hibát) akkor nem jelenik meg semmi és megy a következő input elemre. A kód elhelyezése a weblap alján van.
+Ellenőrzések: 
+	-Név legalább 5 karakter
+	-Email cím tartalmaz @ és .-ot a kukac után, valamint nem lehet üres.
+	-Telefonszám +36-tal kezdődik
+		-Majd a megfelelő hosszúság (11-13)
+	-Darabszám minimum 1-nek kell lennie
+	-Kávétípust muszáj választani
+Ha minden jól ment egy alert ablakban jelzi, hogy válaszát rögzítettük, majd reseteli a formot.
+Ugyanígy egy alert ablakban jelez, ha valami hiba van, és megkér minket a javításra.
+
+Egyedi fonttípust a navbar-nál és az oldal h1-es tagjére használtam. (Playwrite Norge)
+Alapbetűtípus: <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+
+A JavaScript kódokat a Google Gemini AI segített megírni, de a weblap alapszerkezetét én állítottam elő.
+Hozzá vettem a Bootstrap 5.3.3-as verzióját és használtam a jobb elrendezéshez.

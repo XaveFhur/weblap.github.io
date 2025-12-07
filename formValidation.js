@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearError(emailInput, "");
         }
 
-        // 3. Telefonszám (+36) - Módosított kód
+        // 3. Telefonszám (+36)
         const telefonValue = telefonInput.value.trim();
         if (telefonValue === "") {
             setError(telefonInput, 'A telefonszám megadása kötelező.');
