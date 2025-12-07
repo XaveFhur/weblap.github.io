@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kávézacc rendelés leadása">
+    
+    <title>Kávézacc rendelés</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap');
+    </style>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="Képek/favicon.ico">
+    
+    <script src="scriptStilo.js"></script>
+</head>
+<body>
+    <header>
+    <nav class="navbar" id="myNavbar"> 
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Főoldal</a>
+            <a href="menu.html">Menü</a>
+            <a href="rendeles.html">Rendelés</a>
+            <a href="kalkulator.html">Kalória Kalkulátor</a>
+            <a href="galeria.html">Galéria</a>
+        </div>
+    </nav>
+</header>
+
+    <main class="container">
+        <h1>Rendelés Leadása</h1>
+        
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="nev">Teljes Név:</label>
+                <input type="text" id="nev" name="nev"  placeholder="Vezetéknév Keresztnév">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail Cím:</label>
+                <input type="email" id="email" name="email" placeholder="valami@pelda.hu">
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="telefon">Telefonszám:</label>
+                <input type="tel" name="telefon" id="telefon" placeholder="+36 00 0000000" maxlength="13">
+                <span class="error-message"></span>
+            </div>
+
+             <div class="form-group">
+                <label for="kave">Kávé Típusa:</label>
+                <select id="kave" name="kave" >
+                    <option value="">-- Válassz --</option>
+                    <option value="espresso">Espresso</option>
+                    <option value="latte">Latte Macchiato</option>
+                    <option value="capuccino">Capuccino</option>
+                </select>
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="darab">Rendelt Kávé Darabszáma (min. 1):</label>
+                <input type="number" id="darab" name="darab" min="0" value="0">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group radio-group">
+                <label for="tej">Tej típusa:</label>
+                <p class="stil">
+                    Tej nélkül -
+                    <input type="radio" id="nelkul" name="tej" value="nelkul" checked>
+                </p>
+                <p class="stil">
+                    Tej - 
+                    <input type="radio" id="tej" name="tej" value="tej">
+                </p>
+                <p class="stil">
+                    Laktózmentes Tej - 
+                    <input type="radio" id="laktoztej" name="tej" value="laktoztej">
+                </p>
+                <p class="stil">
+                    Növényi tej - 
+                    <input type="radio" id="novenyi" name="tej" value="novenyi">
+                </p>
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <label for="extra">Extrák</label>
+                <p class="stil">
+                    Szórás - 
+                    <input type="checkbox" id="extra" name="extra">
+                </p>
+                <p class="stil">
+                    Csokiöntet -
+                    <input type="checkbox" id="csokiontet" name="extra" >
+                </p>
+                <p class="stil">
+                    10g cukor -
+                    <input type="checkbox" id="10g_cukor" name="extra" >
+                </p>
+                <p class="stil">
+                    Fahéj -
+                    <input type="checkbox" id="fahéj" name="extra" >
+                </p>
+            </div>
+
+            <div class="form-group">
+                <label for="megjegyzes">Megjegyzés a rendeléshez:</label>
+                <textarea id="megjegyzes" name="megjegyzes" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Rendelés Elküldése</button>
+        </form>
+        <a class="gotop" id="fol" href="#"><i class="fa fa-arrow-up"></i></a>
+    </main>
+
+    <footer>
+        <p>&copy; Kávézacc</p>
+    </footer>
+
+    <script src="formValidation.js"></script>
+</body>
+</html>
